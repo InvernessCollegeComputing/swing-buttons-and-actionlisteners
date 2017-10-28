@@ -23,22 +23,15 @@ public class JButtonExample
         frame.add(submitButton);                        //Adding our button to the frame
 
         
-        JLabel confirmSubmissionLabel = new JLabel("Thank you."); 
+        ConfirmationLabel confirmSubmissionLabel = new ConfirmationLabel("Thank you."); 
         confirmSubmissionLabel.setBounds(150,50,90, 50);  
         confirmSubmissionLabel.setVisible(false);
         frame.add(confirmSubmissionLabel);                   //Adding our (initially invisible) label to the frame
         
         
-        // Here we are registering a new ActionListener with our JButton. 
-        // This ActionListener is responsible for responding to the button event when it is triggered.
-        submitButton.addActionListener(new ActionListener() 
-        {
-            @Override
-            public void actionPerformed(ActionEvent ae) 
-            {
-                confirmSubmissionLabel.setVisible(true);
-            }
-        });
+        // Our ConfirmationLabel class is a type of ActionListener now, so we can pass our
+        // instance of it straight in here:
+        submitButton.addActionListener(confirmSubmissionLabel);
         
         
         frame.setSize(300,200);     // Setting Frame size. This is the window size
