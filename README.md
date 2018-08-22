@@ -1,7 +1,7 @@
 # swing-buttons-and-actionlisteners
 A first look at basic UI elements from the Swing libraries and how to hook them up using ActionListeners.
 
-This repo will have three main versions (well, that's all that's planned so far):
+This repo will have three main versions:
 
 - Implementing an Action Listener using the syntax that _some_ IDEs will automatically generate for you.
 - Creating a subclass of JLabel that implements the ActionListener interface.
